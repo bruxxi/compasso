@@ -12,7 +12,7 @@ export const RequestSearch = (username) => {
             setData(res.data)
         })
         .catch((erro) => {
-            alert(erro)
+            console.log(erro)
         })
 
     },[username])

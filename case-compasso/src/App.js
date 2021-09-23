@@ -1,16 +1,19 @@
-import React from 'react'
-import Router from './route/Router'
-import Header from './components/Header/Header'
-import Footer from './components/Footer/Footer'
+import React from "react";
+import { GlobalState } from './global/GlobalState';
+import Router from "./route/Router";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
-const App = () =>{
-  return(
+const App = () => {
+  return (
     <div className="AppContainer">
-      <Header/>
-      <Router/>
-      <Footer/>
+      <GlobalState>
+        <Header />
+        <Router />
+        <Footer />
+      </GlobalState>
     </div>
-  )
-}
+  );
+};
 
 export default App;

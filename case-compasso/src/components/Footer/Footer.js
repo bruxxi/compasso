@@ -1,11 +1,16 @@
-import React from 'react'
+import React from "react";
+import logo from "../../img/compasso.png";
+import { FooterContainer } from "./styled";
+import linkedin from "../../img/linkedin.png";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
-const Footer = () =>{
-    return(
-        <div>
-            <h2>Bruna Sales Nunciato</h2>
-            <p>Email: bruna_nunciato@hotmail.com</p>
-        </div>
-    )
-}
-export default Footer
+const Footer = () => {
+  return (
+    <FooterContainer>
+      <AnchorLink href="https://www.linkedin.com/in/bruna-nunciato/">
+        <img className="logoLinkedin" src={linkedin} />
+      </AnchorLink>
+    </FooterContainer>
+  );
+};
+export default Footer;
