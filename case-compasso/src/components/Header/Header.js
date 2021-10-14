@@ -1,15 +1,17 @@
 import React from "react";
 import logo from "../../img/compasso.png";
-import {HeaderContainer} from '../Header/styled'
+import { HeaderContainer, LogoContainer } from "../Header/styled";
+import octocat from "../../img/octocat.png";
 
 const Header = () => {
   return (
     <HeaderContainer>
-        <div ClassName="LogoContainer">
-        <img src={logo} alt="Compasso logo" />
-      </div>
-      <h3>Processo Seletivo Compasso</h3>
-      <h5>API Rest GitHub</h5>
+      <LogoContainer>
+        <img src={logo} className="compassoLogo" alt="Compasso logo" />
+       <div className="git"> Username Searcher
+        <img src={octocat} className="github" alt="octocat" />
+        </div>
+      </LogoContainer>
     </HeaderContainer>
   );
 };

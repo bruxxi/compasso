@@ -1,24 +1,26 @@
+import React from "react";
+
 const Repos = (repos) => {
   const ListRepos =
-    repos.repos &&
-    repos.repos.map((repos) => {
+    repos&&
+    repos.map((repo) => {
       return (
         <>
-          <h4>{repos.name}</h4>
-          <p>{repos.full_name}</p>
-          <p>{repos.owner.login}</p>
-          <img src={repos.avatar_url} alt={repos.name}></img>
-          <a href={repos.owner.url}>{repos.url}</a>
-          <p>Description: {repos.description}</p>
-          <p>Language: {repos.language}</p>
-          <p>Forks: {repos.forks}</p>
+          <h4>{repo.name}</h4>
+          <p>{repo.full_name}</p>
+          <p>{repo.owner.login}</p>
+          <img src={repo.avatar_url} alt={repo.name}></img>
+          <a href={repo.owner.url}>{repo.url}</a>
+          <p>Description: {repo.description}</p>
+          <p>Language: {repo.language}</p>
+          <p>Forks: {repo.forks}</p>
         </>
       );
     });
 
   return (
     <>
-      {repos.repos ? ListRepos :<p>Zero</p>}
+      {repos ? ListRepos :<p>Nenhum favorito</p>}
     </>
   );
 };

@@ -1,7 +1,6 @@
 import useForm from '../../hooks/useForm'
 import { useHistory } from 'react-router-dom'
 import Button from '@material-ui/core/Button';
-import SearchBar from "material-ui-search-bar";
 
 
 const SearchBarra = (props) => {
@@ -14,12 +13,8 @@ const SearchBarra = (props) => {
     }
 
     return(
-        <div>
-            <SearchBar
-    value={form.username}
-    onChange={onChange}   
-  />
-            <form onSubmit={onSubmitForm}>
+        <div>           
+            <form onSubmit={onSubmitForm}>                
                 <input name={"username"}
                 value={form.username}
                 onChange={onChange}

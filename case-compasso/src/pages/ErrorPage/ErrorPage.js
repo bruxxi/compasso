@@ -1,11 +1,10 @@
 import React from 'react'
-import useProtectedPage from '../../hooks/useProtectedPage'
+import imgError from '../ErrorPage/img/notfound.png'
 
 const ErrorPage = () =>{
-    useProtectedPage()
     return(
         <div>
-            ErrorPage
+            <img src={imgError} alt="error"/>
         </div>
     )
 }
