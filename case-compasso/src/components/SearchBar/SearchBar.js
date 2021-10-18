@@ -1,6 +1,7 @@
 import useForm from '../../hooks/useForm'
 import { useHistory } from 'react-router-dom'
 import Button from '@material-ui/core/Button';
+import { BarContent } from './styled';
 
 
 const SearchBarra = (props) => {
@@ -13,9 +14,9 @@ const SearchBarra = (props) => {
     }
 
     return(
-        <div>           
+        <BarContent>           
             <form onSubmit={onSubmitForm}>                
-                <input name={"username"}
+                <input className="inputSearch" name={"username"}
                 value={form.username}
                 onChange={onChange}
                 label={"Digite o nome do usuário GitHub"}
@@ -26,7 +27,7 @@ const SearchBarra = (props) => {
                 Pesquisar
                 </Button>
             </form>       
-        </div>
+        </BarContent>
     )
 }
 export default SearchBarra

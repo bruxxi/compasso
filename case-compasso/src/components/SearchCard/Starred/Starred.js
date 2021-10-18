@@ -18,7 +18,7 @@ const Starred = (starred) => {
   
     return (
       <>
-        {starred.name? ListRepos : <p>zero</p>}
+        {starred&& ListRepos}
       </>
     );
   };

@@ -14,4 +14,9 @@ grid-column: 1/2;
 .secondCard{
 grid-column: 2/3;
 }
+@media screen  and (max-device-width : 667px){
+display: flex;
+flex-direction: column;
+}
+
 `
