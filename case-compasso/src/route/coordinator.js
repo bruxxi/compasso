@@ -1,3 +1,3 @@
-// export const goToHome = (history) =>{
-//     history.push("/")
-// }
+export const goToHome = (history) =>{
+    history.push("/")
+}
