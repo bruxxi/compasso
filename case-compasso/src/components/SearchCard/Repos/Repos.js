@@ -1,24 +1,18 @@
-const Repos = (repos) => {
-  const ListRepos =
-    repos.repos &&
-    repos.repos.map((repos) => {
-      return (
-        <>
-          <h4>{repos.name}</h4>
-          <p>{repos.full_name}</p>
-          <p>{repos.owner.login}</p>
-          <img src={repos.avatar_url} alt={repos.name}></img>
-          <a href={repos.owner.url}>{repos.url}</a>
-          <p>Description: {repos.description}</p>
-          <p>Language: {repos.language}</p>
-          <p>Forks: {repos.forks}</p>
-        </>
+import React from "react";
+import {CardRepo} from "./styled"
+
+const Repos = (props) => {
+  const ListRepos = props.repos[0] && props.repos.map((repo) => {
+      return (<>
+        <CardRepo>
+          <a target="blank" href={repo.owner.url}><h4>{repo.name.toUpperCase()}</h4>  </a>       
+        </CardRepo></>
       );
     });
 
   return (
     <>
-      {repos.repos ? ListRepos :<p>Zero</p>}
+      {ListRepos}
     </>
   );
 };
