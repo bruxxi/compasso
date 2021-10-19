@@ -17,12 +17,10 @@ const SearchCard = (username) => {
   const [renderStarred, setRenderStarred] = useState(false);
 
   const handleRepos = () => {
-    console.log(`clicou`, repos)
       setRenderRepos(!renderRepos);
   };
 
   const handleStarred = () => {
-    console.log(`clicou`, starred)
       setRenderStarred(!renderStarred);
   };
   const CardStar =  starred[0]? 
@@ -33,8 +31,8 @@ const CardRepo =  repos[0]?
    <Repos repos={repos} />
 :<p>Nenhum repositório</p>
 
-  return (
-    <CardUser>
+  return (<>
+    {user && <CardUser>   
       <div className="firstCard">
         <h1>{user && user.name}</h1>
         {user.bio && <p>{user.bio}</p>}
@@ -61,7 +59,8 @@ const CardRepo =  repos[0]?
 
         {renderStarred && CardStar}
       </div>
-    </CardUser>
+    </CardUser>}
+    </>
   );
 };
 export default SearchCard;
